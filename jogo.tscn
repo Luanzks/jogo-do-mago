@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cajf5egiag7bk"]
+
+[ext_resource type="Script" uid="uid://dam51sybjto1" path="res://character_body_2d.gd" id="1_evvns"]
+[ext_resource type="Texture2D" uid="uid://bsdc372guxspw" path="res://_image.webp" id="2_yq54j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ap6j"]
+size = Vector2(197, 146)
+
+[node name="Jogo" type="Node2D" unique_id=1011792674]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=531954702]
+offset_right = 1154.0
+offset_bottom = 646.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=706288549]
+script = ExtResource("1_evvns")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=804203816]
+position = Vector2(575.9999, 285.99994)
+scale = Vector2(0.19010419, 0.19010417)
+texture = ExtResource("2_yq54j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1345288165]
+position = Vector2(576.5, 287)
+shape = SubResource("RectangleShape2D_1ap6j")
